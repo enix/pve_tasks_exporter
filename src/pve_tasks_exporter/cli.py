@@ -25,7 +25,7 @@ def main():
         "--address", default="127.0.0.1", help="Address to which the exporter will bind"
     )
     parser.add_argument(
-        "--interval", type=int, default=600, help="Interval to retrieve tasks from API"
+        "--interval", type=int, default=60, help="Interval to retrieve tasks from API"
     )
     args = parser.parse_args()
 
