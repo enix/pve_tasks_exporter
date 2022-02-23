@@ -3,6 +3,8 @@ import time
 
 import proxmoxer
 
+from pve_tasks_exporter.init import init_metrics
+
 
 def get_node_tasks(pve):
     """
@@ -46,6 +48,7 @@ def update_metrics(counters, metrics):
 def main_loop(metrics, config, args):
     last_run_timestamp = int(time.time())
     pve = proxmoxer.ProxmoxAPI(args.target, **config["default"])
+    init_metrics(metrics, pve)
 
     while True:
         tmp_last_run_timestamp = int(time.time())
