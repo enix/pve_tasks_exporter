@@ -9,7 +9,7 @@ def get_node_tasks(pve):
     Retrieve the lisr of tasks for each node
     """
     return {
-        node["node"]: pve.nodes(node["node"]).tasks.get(source="all", limit=200)
+        node["node"]: pve.nodes(node["node"]).tasks.get(source="archive", limit=200)
         for node in pve.nodes.get()
     }
 
