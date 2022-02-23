@@ -45,7 +45,6 @@ def update_metrics(counters, metrics):
 
 def main_loop(metrics, config, args):
     last_run_timestamp = int(time.time())
-    # FIXME? May need to move in the loop for token renew
     pve = proxmoxer.ProxmoxAPI(args.target, **config["default"])
 
     while True:
