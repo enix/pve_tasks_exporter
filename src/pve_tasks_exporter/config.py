@@ -1,5 +1,6 @@
 """
 Config module for Proxmox VE prometheus collector.
+From https://github.com/prometheus-pve/prometheus-pve-exporter/blob/main/src/pve_exporter/config.py
 """
 
 try:
